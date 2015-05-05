@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    include ./includes/head.jade
+  body.home
+    include ./includes/nav.jade
+
+    .content
+      .row
+        .columns.medium-12
+          //- slick slider items
+          include ./includes/slider.jade
+
+      .row
+        main.columns.medium-9
+          include ./includes/main.jade
+
+        aside.columns.medium-3
+          include ./includes/aside.jade
+
+      hr
+
+      //- footer & scripts
+      include ./includes/footer.jade
+      include ./includes/scripts.jade
