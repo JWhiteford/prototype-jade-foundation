@@ -1,3 +1,5 @@
+- menu = { home: 'index.html', about: 'about.html', contact: 'contact.html' };
+
 nav(class='top-bar', data-topbar)
   ul.title-area
     li.name
@@ -9,19 +11,10 @@ nav(class='top-bar', data-topbar)
 
   section.top-bar-section
     ul.right
-      li.active
-        a(href='#') home
-      li
-        a(href='#') about
-      li
-        a(href='#') board
-      li
-        a(href='#') business directory
-      li
-        a(href='#') events
-      li
-        a(href='#') blog
-      li
-        a(href='#') contact
-      li
-        a(href='#') login
+      each val, key in menu
+        if selected === key
+          li.active
+            a(href=val)= key
+        else
+          li
+            a(href=val)= key

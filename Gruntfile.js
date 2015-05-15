@@ -24,8 +24,8 @@ module.exports = function(grunt) {
       },
       compile: {
         files: {
-          // "index.html": ["jade/index.jade"],
-          'index.html': ['jade/*.jade'],
+          'index.html': ['jade/index.jade'],
+          'contact.html': ['jade/contact.jade']
         }
       }
     },
